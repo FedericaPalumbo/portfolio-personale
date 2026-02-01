@@ -13,5 +13,8 @@ Sito portfolio personale sviluppato in HTML e CSS.
 ## Obiettivo
 Progetto realizzato come primo portfolio personale durante il percorso ITS in Web Development.
 
+## Stato del progetto
+In sviluppo – verrà aggiornato con nuovi progetti e funzionalità.
+
 ## 🌐 Live website
 https://federicapalumbo.github.io/portfolio-personale/
