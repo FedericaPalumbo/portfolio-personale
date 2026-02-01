@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federica Palumbo | Web Developer Full Stack</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="prefetch" href="https://federicapalumbo.github.io/portfolio-personale/">  <!--Inizia a caricare da subito la pagina così l'entrata nel website è più lineare-->
+<!--In futuro per rendere più fluida l'entrata nei link di altri progetti aggiungere:
+<link rel="prefetch" href="progetti/progetto1.html">
+<link rel="prefetch" href="progetti/progetto2.html">
+<link rel="prefetch" href="progetti/progetto3.html">
+-->
+</head>
+<body>
+ <!-- HERO -->
+  <header class="hero">
+    <div class="hero-text">
+      <span class="role">Web Developer Full Stack</span>
+      <h1>Federica Palumbo</h1>
+      <p>Web Developer Full Stack in formazione, con focus su front-end, UX e sviluppo di interfacce moderne e accessibili.</p>
+    <a href="#projects" class="hero-cta">Vedi i miei progetti →</a>
+  </div>
+
+    <div class="hero-image">
+      <img src="me.jpg" alt="Foto di Federica Palumbo">
+    </div>
+    
+  </header>
+
+ <!-- NAV -->
+  <nav aria-label="Navigazione principale">
+    <a href="#about">Chi sono</a>
+    <a href="#skills">Competenze</a>
+    <a href="#projects">Progetti</a>
+    <a href="#contact">Contatti</a>
+  </nav>
+
+ <!-- ABOUT -->
+  <section id="about">
+    <h2>Chi sono</h2>
+    <p>
+     Sono una studentessa ITS in Web Development Full Stack con una forte attenzione al design dell’interfaccia e all’esperienza utente.
+Mi sto formando nello sviluppo di applicazioni web utilizzando HTML e CSS; lavorando su progetti pratici che uniscono funzionalità e cura visiva.
+<br>
+Il mio obiettivo è crescere come web developer junior, contribuendo allo sviluppo di interfacce moderne, accessibili e ben strutturate.
+    </p>
+  </section>
+  
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Competenze</h2>
+    <ul>
+      <li><strong>Front-end:</strong> HTML, CSS (Flexbox, Grid, Responsive)</li>
+      <li><strong>Back-end:</strong> PHP, SQL, JavaScript</li>
+      <li><strong>Linguaggi:</strong> C, C#, Java</li>
+      <li><strong>Tools:</strong> GitHub, VS & VS Code, IntelliJ IDEA, SQL Server Management Studio</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+  <h2>Progetti</h2>
+  <div class="projects-grid">
+
+   <!--Primo progetto--> 
+  <a href="https://federicapalumbo.github.io/portfolio-personale/" class="project-card-link">
+  <article class="project-card">
+      <div class="project-icons">
+        <span class="icon" data-label="HTML">
+          <img src="icons/html.jpg" alt="HTML">
+        </span>
+        <span class="icon" data-label="CSS">
+          <img src="icons/css.jpg" alt="CSS">
+        </span>
+        <!--In questo spazio posso aggiungere ulteriori icone che si alineeranno automaticamente-->
+  </div>
+
+    <img src="me.jpg" alt="Anteprima progetto">
+    <div class="project-content">
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        Sito portfolio personale sviluppato in HTML e CSS,
+        con attenzione a layout responsive, micro-interazioni e user experience.
+      </p>
+    </div>
+  </article>
+</a>
+
+   <!-- In futuro per progetti extra:<article class="project-card">...</article> -->
+</div>
+</section>
+
+   <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contatti</h2>
+    <p>Email: <a href="mailto:federicapalumbo10@gmail.com">federicapalumbo10@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/FedericaPalumbo" target="_blank">FedericaPalumbo</a></p>
+  </section>
+
+</body>
+</html>
+
+
