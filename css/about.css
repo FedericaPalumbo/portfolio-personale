@@ -1,0 +1,191 @@
+/* ================================================================
+   ABOUT.CSS — Sezione Chi Sono
+   ================================================================ */
+
+.about {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Linea verticale decorativa */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--border) 20%, var(--border) 80%, transparent);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: start;
+}
+
+/* ---- Testo ---- */
+.about-text p {
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+}
+
+.about-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Stats row */
+.about-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.about-stat {
+  flex: 1;
+  text-align: center;
+}
+
+.about-stat strong {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.about-stat strong span {
+  color: var(--accent);
+  font-size: 0.65em;
+}
+
+.about-stat > span {
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+.about-stat-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ---- Visual (destra) ---- */
+.about-visual {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about-img-wrap {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) brightness(0.85);
+  transition: filter 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.about-img-wrap:hover .about-img {
+  filter: grayscale(0%) brightness(0.9);
+  transform: scale(1.03);
+}
+
+.about-img-tag {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: rgba(10,9,8,0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-full);
+  padding: 0.35rem 1rem;
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Focus card */
+.about-focus-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.5rem 1.8rem;
+  transition: border-color var(--t-base), transform var(--t-slow) var(--ease-out);
+}
+
+.about-focus-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+}
+
+.focus-label {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.about-focus-card p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .about::before {
+    display: none;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-visual {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats {
+    gap: 0;
+  }
+}

@@ -1,0 +1,205 @@
+/* ================================================================
+   CONTACT.CSS
+   ================================================================ */
+
+.contact {
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-bg-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--border), transparent 50%, var(--border));
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Layout */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: clamp(4rem, 7vw, 8rem);
+  align-items: center;
+}
+
+/* Testo */
+.contact-title {
+  font-family: var(--ff-display);
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -3px;
+  color: var(--text-primary);
+  margin: 1.5rem 0;
+}
+
+.contact-title em {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.contact-sub {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* Links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    background var(--t-base),
+    border-color var(--t-base),
+    transform var(--t-slow) var(--ease-out);
+}
+
+.contact-link:hover {
+  background: var(--accent-dim);
+  border-color: rgba(232, 168, 112, 0.3);
+  transform: translateX(8px);
+}
+
+.contact-link-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: background var(--t-base), border-color var(--t-base);
+}
+
+.contact-link:hover .contact-link-icon {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.link-label {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 0.2rem;
+}
+
+.link-value {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.link-arrow {
+  margin-left: auto;
+  color: var(--text-tertiary);
+  font-size: 1.1rem;
+  transition: color var(--t-fast), transform var(--t-base) var(--ease-out);
+}
+
+.contact-link:hover .link-arrow {
+  color: var(--accent);
+  transform: translateX(4px) translateY(-4px);
+}
+
+/* Visual */
+.contact-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.contact-photo-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: var(--r-lg);
+  overflow: visible;
+}
+
+.contact-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--r-lg);
+  display: block;
+  border: 1px solid var(--border);
+  filter: grayscale(15%) brightness(0.85);
+  transition: filter 0.6s var(--ease-out);
+}
+
+.contact-photo-wrap:hover .contact-photo {
+  filter: grayscale(0%) brightness(0.9);
+}
+
+.contact-photo-deco {
+  position: absolute;
+  inset: -12px;
+  border-radius: calc(var(--r-lg) + 12px);
+  border: 1px solid var(--border);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.contact-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.availability-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contact-visual {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

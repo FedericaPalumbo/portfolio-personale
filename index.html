@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Federica Palumbo — Web Developer Full Stack. Portfolio personale con progetti, competenze e contatti.">
+  <title>Federica Palumbo | Web Developer Full Stack</title>
+
+  <!-- Preconnect per performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts: Syne (display bold) + Instrument Serif (italic accent) + Geist Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS modulare -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/education.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/international.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       PRELOADER
+       ============================================================ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-name">FP.</span>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CURSORE CUSTOM
+       ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ============================================================
+       NAVIGAZIONE
+       ============================================================ -->
+  <nav class="site-nav" aria-label="Navigazione principale">
+    <a href="#" class="nav-logo">
+      <span>FP</span><span class="nav-logo-dot">.</span>
+    </a>
+
+    <button class="nav-hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about" data-num="01">Chi sono</a></li>
+      <li><a href="#education" data-num="02">Formazione</a></li>
+      <li><a href="#skills" data-num="03">Competenze</a></li>
+      <li><a href="#projects" data-num="04">Progetti</a></li>
+      <li><a href="#international" data-num="05">Internazionale</a></li>
+      <li><a href="#contact" class="nav-cta">Contattami</a></li>
+    </ul>
+
+    <div class="nav-progress"></div>
+  </nav>
+
+  <!-- ============================================================
+       MOBILE MENU OVERLAY
+       ============================================================ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu-nav">
+      <a href="#about" class="mobile-link"><span>01</span>Chi sono</a>
+      <a href="#education" class="mobile-link"><span>02</span>Formazione</a>
+      <a href="#skills" class="mobile-link"><span>03</span>Competenze</a>
+      <a href="#projects" class="mobile-link"><span>04</span>Progetti</a>
+      <a href="#international" class="mobile-link"><span>05</span>Internazionale</a>
+      <a href="#contact" class="mobile-link mobile-link--cta">Contattami →</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <span>© 2025 Federica Palumbo</span>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <header id="home" class="hero">
+
+    <!-- Sfondo noise + griglia -->
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-bg-grain" aria-hidden="true"></div>
+
+    <!-- Orb decorativo -->
+    <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+
+    <div class="hero-inner container">
+
+      <!-- Top bar: available tag + year -->
+      <div class="hero-topbar">
+        <div class="hero-available">
+          <span class="hero-available-dot"></span>
+          Available for projects
+        </div>
+        <span class="hero-year">2025</span>
+      </div>
+
+      <!-- Titolo massiccio -->
+      <div class="hero-title-wrap">
+        <div class="hero-role clip-text">
+          <span class="hero-line-inner">Web Developer</span>
+        </div>
+        <h1 class="hero-name">
+          <span class="hero-name-line clip-text"><span class="hero-line-inner">Federica</span></span>
+          <span class="hero-name-line hero-name-line--italic clip-text"><span class="hero-line-inner">Palumbo.</span></span>
+        </h1>
+      </div>
+
+      <!-- Bottom bar: descrizione + foto + CTA -->
+      <div class="hero-bottom">
+        <p class="hero-description clip-text">
+          <span class="hero-line-inner">
+            Sviluppo interfacce moderne e accessibili<br>
+            con forte attenzione a UX, micro-interazioni<br>
+            e pulizia visiva.
+          </span>
+        </p>
+
+        <!-- Immagine profilo -->
+        <div class="hero-photo-wrap" aria-hidden="true">
+          <div class="hero-photo-frame">
+            <img
+              src="images/me.jpg"
+              alt="Foto di Federica Palumbo"
+              class="hero-photo"
+              width="320" height="400"
+            >
+            <div class="hero-photo-badge">
+              <span class="badge-icon">✦</span>
+              <div class="badge-text">
+                <strong>ITS Full Stack</strong>
+                <em>In corso · 2025</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="hero-cta-group">
+          <a href="assets/cv/Palumbo_Federica_CV.pdf" download class="btn-primary">
+            <span>Scarica CV</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 1v8M3 7l4 4 4-4M2 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <a href="#projects" class="btn-ghost">
+            Vedi i progetti
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-track"><div class="hero-scroll-thumb"></div></div>
+      <span>scroll</span>
+    </div>
+
+    <!-- Numero sezione decorativo -->
+    <div class="hero-section-num" aria-hidden="true">00</div>
+
+  </header>
+
+
+  <!-- ============================================================
+       CHI SONO
+       ============================================================ -->
+  <section id="about" class="about section">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-eyebrow reveal">
+          <span class="eyebrow-num">01 /</span> Chi sono
+        </span>
+        <h2 class="section-title reveal">
+          Una developer<br>
+          <em>curiosa</em> e<br>
+          <em>orientata</em> al design<span class="accent-dot">.</span>
+        </h2>
+      </div>
+
+      <div class="about-inner">
+
+        <div class="about-text">
+          <p class="reveal">
+            Sono una studentessa ITS in <strong>Web Development Full Stack</strong>
+            con una forte attenzione al <strong>design dell'interfaccia</strong>
+            e all'<strong>esperienza utente</strong>.
+          </p>
+          <p class="reveal">
+            Mi sto formando nello sviluppo di applicazioni web con
+            <strong>HTML, CSS e JavaScript</strong>, lavorando su progetti pratici
+            che uniscono funzionalità e cura visiva.
+          </p>
+          <p class="reveal">
+            Il mio obiettivo è crescere come <strong>web developer junior</strong>,
+            contribuendo alla creazione di interfacce moderne, accessibili e
+            ben strutturate.
+          </p>
+
+          <div class="about-stats reveal">
+            <div class="about-stat">
+              <strong>9<span>+</span></strong>
+              <span>Programmi<br>internazionali</span>
+            </div>
+            <div class="about-stat-divider"></div>
+            <div class="about-stat">
+              <strong>5<span>+</span></strong>
+              <span>Paesi<br>visitati</span>
+            </div>
+            <div class="about-stat-divider"></div>
+            <div class="about-stat">
+              <strong>2025</strong>
+              <span>ITS Full<br>Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card visuale destra -->
+        <div class="about-visual reveal">
+          <div class="about-img-wrap">
+            <img src="images/AboutMe.jpg" alt="Coding setup" class="about-img">
+            <div class="about-img-tag">
+              <span>UI · UX · Front-End</span>
+            </div>
+          </div>
+          <div class="about-focus-card">
+            <span class="focus-label">Focus</span>
+            <p>Design essenziale, codice pulito,<br>attenzione ai dettagli.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FORMAZIONE
+       ============================================================ -->
+  <section id="education" class="education section">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-eyebrow reveal">
+          <span class="eyebrow-num">02 /</span> Formazione
+        </span>
+        <h2 class="section-title reveal">
+          Background<br>
+          & percorso<span class="accent-dot">.</span>
+        </h2>
+      </div>
+
+      <div class="edu-timeline">
+
+        <div class="edu-item reveal">
+          <div class="edu-meta">
+            <span class="edu-year">2025</span>
+            <span class="edu-status-badge">In corso</span>
+          </div>
+          <div class="edu-content">
+            <div class="edu-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2L2 6l8 4 8-4-8-4zM2 10l8 4 8-4M2 14l8 4 8-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>ITS Web Developer Full Stack</h3>
+              <p class="edu-school">ITS Digital Academy Mario Volpato</p>
+            </div>
+          </div>
+          <div class="edu-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="edu-item reveal">
+          <div class="edu-meta">
+            <span class="edu-year">2018 — 2023</span>
+          </div>
+          <div class="edu-content">
+            <div class="edu-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="3" y="5" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M7 5V4a3 3 0 016 0v1" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M7 10h6M7 13h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Diploma ITET — Sistemi Informativi Aziendali</h3>
+              <p class="edu-school">ITET Aulo Ceccato</p>
+            </div>
+          </div>
+          <div class="edu-tags">
+            <span>Informatica</span><span>Economia</span><span>Diritto</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       COMPETENZE
+       ============================================================ -->
+  <section id="skills" class="skills section">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-eyebrow reveal">
+          <span class="eyebrow-num">03 /</span> Competenze
+        </span>
+        <h2 class="section-title reveal">
+          Tech stack<br>
+          & strumenti<span class="accent-dot">.</span>
+        </h2>
+      </div>
+
+      <div class="skills-layout">
+
+        <!-- Barra laterale con label -->
+        <div class="skills-sidebar reveal">
+          <p>Tecnologie e strumenti con cui lavoro quotidianamente nel mio percorso di formazione.</p>
+          <a href="assets/cv/Palumbo_Federica_CV.pdf" download class="skills-cv-link">
+            Scarica CV completo
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Grid skill cards -->
+        <div class="skills-grid">
+
+          <div class="skill-card reveal" data-category="frontend">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M3 2l1.5 14L9 17.5l4.5-1.5L15 2H3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M5.5 5.5h7M5.5 8.5h7M6.5 11.5l2.5 1.5 2.5-1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="skill-card-category">Front-end</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag">HTML</span>
+              <span class="stag">CSS</span>
+              <span class="stag">Flexbox</span>
+              <span class="stag">CSS Grid</span>
+              <span class="stag">Responsive</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-category="backend">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M6 7l-2 2 2 2M12 7l2 2-2 2M10 6l-2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="skill-card-category">Back-end & Scripting</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag">JavaScript</span>
+              <span class="stag">PHP</span>
+              <span class="stag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-category="languages">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M2 9h14M9 2v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span class="skill-card-category">Linguaggi</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag">C</span>
+              <span class="stag">C#</span>
+              <span class="stag">Java</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" data-category="tools">
+            <div class="skill-card-header">
+              <span class="skill-card-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 2a7 7 0 100 14A7 7 0 009 2z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M9 6v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="skill-card-category">Tools & Ambienti</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag">GitHub</span>
+              <span class="stag">GIT</span>
+              <span class="stag">VS Code</span>
+              <span class="stag">Visual Studio</span>
+              <span class="stag">IntelliJ</span>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Skill bar orizzontale (decorativa) -->
+      <div class="skills-marquee-wrap reveal">
+        <div class="skills-marquee">
+          <span>HTML</span><span>·</span>
+          <span>CSS</span><span>·</span>
+          <span>JavaScript</span><span>·</span>
+          <span>PHP</span><span>·</span>
+          <span>SQL</span><span>·</span>
+          <span>Java</span><span>·</span>
+          <span>C#</span><span>·</span>
+          <span>GitHub</span><span>·</span>
+          <span>VS Code</span><span>·</span>
+          <span>HTML</span><span>·</span>
+          <span>CSS</span><span>·</span>
+          <span>JavaScript</span><span>·</span>
+          <span>PHP</span><span>·</span>
+          <span>SQL</span><span>·</span>
+          <span>Java</span><span>·</span>
+          <span>C#</span><span>·</span>
+          <span>GitHub</span><span>·</span>
+          <span>VS Code</span><span>·</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROGETTI
+       ============================================================ -->
+  <section id="projects" class="projects section">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-eyebrow reveal">
+          <span class="eyebrow-num">04 /</span> Progetti
+        </span>
+        <h2 class="section-title reveal">
+          Lavori<br>
+          selezionati<span class="accent-dot">.</span>
+        </h2>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- Progetto 1 -->
+        <a
+          href="https://federicapalumbo.github.io/portfolio-personale/"
+          target="_blank"
+          rel="noopener"
+          class="project-item reveal"
+        >
+          <div class="project-item-inner">
+            <div class="project-num">01</div>
+            <div class="project-info">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">Sito portfolio sviluppato in HTML e CSS, con layout responsive, micro-interazioni e forte attenzione all'UX.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-img-wrap">
+              <img src="images/me.jpg" alt="Portfolio screenshot" class="project-img">
+              <div class="project-img-overlay">
+                <span>Visita →</span>
+              </div>
+            </div>
+            <div class="project-arrow">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M5 17L17 5M17 5H7M17 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+<!-- Progetto 2 -->
+        <a
+          href="https://federicapalumbo.github.io/TheMealDB_WebPage/"
+          target="_blank"
+          rel="noopener"
+          class="project-item reveal"
+        >
+          <div class="project-item-inner">
+            <div class="project-num">02</div>
+            <div class="project-info">
+              <h3 class="project-title">TheMeal DataBase</h3>
+              <p class="project-desc">Applicazione web sviluppata con HTML, CSS e JavaScript che integra l’API di TheMealDB per il recupero dinamico delle ricette, con struttura responsive, gestione delle chiamate API e navigazione intuitiva dei contenuti.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-img-wrap">
+              <img src="images/MealExplorer.png" alt="MealExplorer" class="project-img">
+              <div class="project-img-overlay">
+                <span>Visita →</span>
+              </div>
+            </div>
+            <div class="project-arrow">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M5 17L17 5M17 5H7M17 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Placeholder futuri progetti -->
+        <div class="project-item project-item--placeholder reveal">
+          <div class="project-item-inner">
+            <div class="project-num">03</div>
+            <div class="project-info">
+              <h3 class="project-title">Prossimamente</h3>
+              <p class="project-desc">Nuovi progetti in arrivo. Stay tuned.</p>
+            </div>
+            <div class="project-placeholder-badge">WIP</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROGRAMMI INTERNAZIONALI
+       ============================================================ -->
+  <section id="international" class="international section">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-eyebrow reveal">
+          <span class="eyebrow-num">05 /</span> Internazionale
+        </span>
+        <h2 class="section-title reveal">
+          Esperienze<br>
+          globali<span class="accent-dot">.</span>
+        </h2>
+      </div>
+
+      <div class="intl-intro reveal">
+        <p>9+ programmi internazionali in 5+ paesi tra Europa e Asia. Ogni esperienza mi ha arricchita sia come persona che come professionista.</p>
+      </div>
+
+      <div class="intl-grid">
+
+        <!-- IT / Tecnologia -->
+        <div class="intl-card reveal">
+          <div class="intl-card-img-wrap">
+            <img src="images/ProgettiIT.png" alt="IT Projects" class="intl-card-img">
+            <div class="intl-card-overlay">
+              <span class="intl-card-category">IT & Tech</span>
+            </div>
+          </div>
+          <div class="intl-card-body">
+            <h3>Progetti IT</h3>
+            <p>Tecnologia, formazione digitale e collaborazione tra giovani sviluppatori.</p>
+            <ul class="intl-events">
+              <li>
+                <span class="event-name">Development of youth workers with simulation</span>
+                <span class="event-meta">Training Course · Ankara, Turkey · mag–giu 2022</span>
+              </li>
+              <li>
+                <span class="event-name">One-Project</span>
+                <span class="event-meta">Youth Exchange · Bursa, Turkey · nov 2023</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ecologia -->
+        <div class="intl-card reveal">
+          <div class="intl-card-img-wrap">
+            <img src="images/ecology.jpg" alt="Ecology Projects" class="intl-card-img">
+            <div class="intl-card-overlay">
+              <span class="intl-card-category">Ecologia</span>
+            </div>
+          </div>
+          <div class="intl-card-body">
+            <h3>Sviluppo Ecologico</h3>
+            <p>Sostenibilità ambientale, tutela del mare e sensibilizzazione ecologica.</p>
+            <ul class="intl-events">
+              <li>
+                <span class="event-name">Coral saves the sea</span>
+                <span class="event-meta">Youth Exchange · Almuñécar, Spain · ott 2023</span>
+              </li>
+              <li>
+                <span class="event-name">Mind my Game</span>
+                <span class="event-meta">Youth Exchange · Albufera (Valencia) Spain · mar–apr 2025</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Benessere emotivo -->
+        <div class="intl-card reveal">
+          <div class="intl-card-img-wrap">
+            <img src="images/ProgettiBenessereEmotivo.jpg" alt="Mental wellness" class="intl-card-img">
+            <div class="intl-card-overlay">
+              <span class="intl-card-category">Wellbeing</span>
+            </div>
+          </div>
+          <div class="intl-card-body">
+            <h3>Benessere Mentale</h3>
+            <p>Benessere emotivo, inclusione sociale e crescita personale.</p>
+            <ul class="intl-events">
+              <li>
+                <span class="event-name">Healty Potter and the Chamber of emotions</span>
+                <ZSpan class="event-meta">Youth Exchange · Luxembourg · ago 2023</span>
+              </li>
+              <li>
+                <span class="event-name">Care for Youth – Care for all!</span>
+                <span class="event-meta">Youth Exchange · Aparan, Armenia · apr 2024</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Arte -->
+        <div class="intl-card reveal">
+          <div class="intl-card-img-wrap">
+            <img src="images/ProgettiArtistici.jpg" alt="Art Projects" class="intl-card-img">
+            <div class="intl-card-overlay">
+              <span class="intl-card-category">Arte & Cultura</span>
+            </div>
+          </div>
+          <div class="intl-card-body">
+            <h3>Progetti Artistici</h3>
+            <p>Arte, cultura, inclusione e comunicazione creativa.</p>
+            <ul class="intl-events">
+              <li>
+                <span class="event-name">Culture Builders</span>
+                <span class="event-meta">Youth Exchange · Veli Iž, Croatia · ott 2023</span>
+              </li>
+              <li>
+                <span class="event-name">Cultures come together in Hattusa</span>
+                <span class="event-meta">Youth Exchange · Çorum, Turkey · ott–nov 2023</span>
+              </li>
+              <li>
+                <span class="event-name">Coloring the Future</span>
+                <span class="event-meta">European Solidarity Corps  · Cortes de la Frontera, Spain · mag 2024</span>
+              </li>
+              <li>
+                <span class="event-name">MAGIC - Music and Art for Greater Inclusion and Communication</span>
+                <span class="event-meta">Youth Exchange  · Bologna, Italy · set-ott 2024</span>
+              </li>
+              <li>
+                <span class="event-name">Coloring the Future II</span>
+                <span class="event-meta">European Solidarity Corps  · Cortes de la Frontera, Spain · mag-giu 2025</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTATTI
+       ============================================================ -->
+  <section id="contact" class="contact section">
+
+    <!-- Sfondo decorativo -->
+    <div class="contact-bg-line" aria-hidden="true"></div>
+
+    <div class="container">
+
+      <div class="contact-inner">
+
+        <!-- Testo grande -->
+        <div class="contact-text">
+          <span class="section-eyebrow reveal">
+            <span class="eyebrow-num">06 /</span> Contatti
+          </span>
+          <h2 class="contact-title reveal">
+            Let's build<br>
+            <em>something</em><br>
+            together<span class="accent-dot">.</span>
+          </h2>
+          <p class="contact-sub reveal">
+            Aperta a collaborazioni, stage e opportunità junior.<br>
+            Rispondo sempre volentieri.
+          </p>
+
+          <div class="contact-links reveal">
+            <a href="mailto:federicapalumbo10@gmail.com" class="contact-link">
+              <span class="contact-link-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <rect x="2" y="4" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 7l7 4 7-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="link-label">Email</span>
+                <span class="link-value">federicapalumbo10@gmail.com</span>
+              </div>
+              <span class="link-arrow">↗</span>
+            </a>
+
+            <a href="https://github.com/FedericaPalumbo" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 1C4.58 1 1 4.58 1 9c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0017 9c0-4.42-3.58-8-8-8z" fill="currentColor"/>
+                </svg>
+              </span>
+              <div>
+                <span class="link-label">GitHub</span>
+                <span class="link-value">FedericaPalumbo</span>
+              </div>
+              <span class="link-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Foto contatti -->
+        <div class="contact-visual reveal">
+          <div class="contact-photo-wrap">
+            <img src="images/fotoContatti.jpg" alt="Federica Palumbo" class="contact-photo">
+            <div class="contact-photo-deco" aria-hidden="true"></div>
+          </div>
+          <div class="contact-availability">
+            <div class="availability-dot"></div>
+            <span>Available for selected projects</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#" class="footer-logo">FP<span class="accent-dot">.</span></a>
+      <p class="footer-copy">© 2025 Federica Palumbo — Web Developer</p>
+      <a href="#home" class="footer-top" aria-label="Torna in cima">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        Back to top
+      </a>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="js/preloader.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/marquee.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* ================================================================
+   INTERNATIONAL.CSS
+   ================================================================ */
+
+.international {
+  background: var(--bg);
+}
+
+.intl-intro {
+  max-width: 600px;
+  margin-bottom: 3.5rem;
+}
+
+.intl-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Grid */
+.intl-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card */
+.intl-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition:
+    border-color var(--t-base),
+    transform var(--t-slow) var(--ease-out),
+    box-shadow var(--t-slow);
+}
+
+.intl-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Immagine */
+.intl-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.intl-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6) saturate(0.8);
+  transition: filter 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.intl-card:hover .intl-card-img {
+  filter: brightness(0.75) saturate(1);
+  transform: scale(1.06);
+}
+
+.intl-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(to top, rgba(10,9,8,0.8) 0%, transparent 60%);
+}
+
+.intl-card-category {
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Body */
+.intl-card-body {
+  padding: 1.5rem 1.6rem 1.8rem;
+}
+
+.intl-card-body h3 {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.intl-card-body > p {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text-tertiary);
+  margin-bottom: 1.3rem;
+}
+
+/* Events */
+.intl-events {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.intl-events li {
+  padding: 0.7rem 0.9rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: var(--r-sm);
+  border-left: 2px solid var(--border);
+  transition: border-left-color var(--t-fast), background var(--t-fast);
+}
+
+.intl-events li:hover {
+  border-left-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.event-name {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+  line-height: 1.4;
+}
+
+.event-meta {
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.3px;
+  color: var(--text-tertiary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .intl-grid {
+    grid-template-columns: 1fr;
+  }
+}
